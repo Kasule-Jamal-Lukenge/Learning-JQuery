@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fading Out using JQeery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <style>
+        .blueBox{
+            /* display: none; */
+            border: solid blue;
+            height: 30px;
+            width: 30px;
+            background-color: blue;
+        }
+    </style>
+    <body>
+        <h4>Click This Button To Hide The Box</h4>
+        <button id="clickMe">Hide Blue Box</button>
+        <div class="blueBox">
+            <!-- <p>Hello World</p> -->
+        </div>
+        <h4>Thank You For Your Commitment!!!</h4>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#clickMe").click(function(){
+                $(".blueBox").fadeOut();
+            })
+        })
+    </script>
+</html>

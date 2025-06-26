@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slide With JQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <style>
+        .hideSecret{
+            margin-top: 5px;
+        }
+    </style>
+    <body>
+        <button class="slideDown">Click Here To View Secret</button>
+        <p class="byebye" style="display:none;">I am going. Bye Bye!!!</p>
+        <button class="hideSecret">You Have Read The Secret. Please Hide It Now. Quickly!!!</button>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".slideDown").click(function(){
+                $(".byebye").slideDown(2000);
+            })
+        });
+        $(document).ready(function(){
+            $(".hideSecret").click(function(){
+                $(".byebye").fadeOut(1000);
+            })
+        })
+    </script>
+</html>
