@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getting Using JQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- <p id="getText">Getting Text Using JQuery</p><br>
+        <button class="htmlText">HTML</button> -->
+        <p id="text">Getting <b>HTML</b> <i>Using</i> JQuery</p><br>
+        <button class="html">HTML</button><br>
+        <button class="html2">Just Text</button><br>
+        <input type="number" placeholder="Enter A Number...." id="getValue">
+        <!-- <button class="valueChange">Show Value</button> -->
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".html").click(function(){
+                alert("HTML:" + $("#text").html());
+            });
+
+            $(".html2").click(function(){
+                alert("HTML Text: " +  $("#text").text());
+            });
+
+            $("#getValue").change(function(){
+                alert("Value Has Changed To: " + $("#getValue").val());
+            });
+        });
+    </script>
+</html>

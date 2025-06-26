@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Setting And Getting Values Using JQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <label>Enter Value 1:</label>
+        <input type="number" placeholder="Enter the first value..." id="value1" value="0"/>
+        <label>Enter Value 2:</label>
+        <input type="number" placeholder="Enter the second value..." id="value2" value="0"/>
+        <label>Result:</label>
+        <button id="calculate">Calculate</button>
+        <input type="number" id="result" style="display: none;"/>
+    </body>
+    <script>
+        function add(){
+                var val1 = $("#value1").val();
+                var val2 = $("#value2").val();
+                var res = parseInt(val1) + parseInt(val2);
+                $("#result").val(res);
+                $("#result").slideDown(100);
+            }
+        $(document).ready(function(){
+            // add();
+            // debugger;
+            //  $("#calculate").click(function(){
+            
+            $("#value1").on('keyup',function(){
+                add();
+            })
+            $("#value2").on('keyup',function(){
+                add();
+            })
+               
+          
+        });
+    </script>
+</html>
