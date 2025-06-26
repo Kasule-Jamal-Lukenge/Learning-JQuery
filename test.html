@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Testing Jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p id="paragraph">Hello World</p>
+        <button id="hide">Hide Me</button>
+        <button id="show">Show Me</button>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#paragraph").hide();
+            });
+            $("#show").click(function(){
+                $("#paragraph").show();
+            });
+        });
+    </script>
+</html>

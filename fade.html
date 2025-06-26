@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fading Using JQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p class="paragraph">I am learning JQuery</p>
+        <button id="read_more">Read More</button>
+        <p id="slide" style="display:none;">You Have Slid it</p>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#read_more").click(function(){
+                $("#slide").fadeIn(5000);
+            })
+        })
+    </script>
+</html>
